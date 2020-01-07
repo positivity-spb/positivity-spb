@@ -22,6 +22,9 @@ body {
 }
 
 @media (max-width:575px) {
+    body {
+        padding-top: 10vh;
+    }
 }
 
 @media (max-width:575px) {
