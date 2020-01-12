@@ -1,13 +1,13 @@
 @font-face {
     font-family: Geometria; /* Имя шрифта */
     src: url(assets/fonts/Geometria.ttf); /* Путь к файлу со шрифтом */
-    font-weight: normal;    
+    font-weight: normal;
 }
 
 @font-face {
     font-family: Geometria-Bold; /* Имя шрифта */
     src: url(assets/fonts/Geometria-Bold.ttf); /* Путь к файлу со шрифтом */
-    font-weight: bold;    
+    font-weight: bold;
 }
 
 html {
@@ -28,57 +28,22 @@ body {
     background-attachment: fixed;
 }
 
-@media (max-width:767px) {
-    body {
-    }
+@media (min-width:576px) {
+  .container {
+       max-width: 800px;
+   }
 }
 
 @media (max-width:575px) {
-}
-
-@media (max-width:575px) {
-    .container {
-        max-width: 320px;
+   .container {
+        max-width: 350px;
     }
 }
 
-.title-box {
-    width: 260px;
-    text-align: center;
-    position: relative;
-    border-bottom: 1px solid;
-    padding-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 51px;
-    opacity: 0.9;
-    color: #ffffff;
+.container{
+  background-color: rgba(255, 243, 205, 0.9);
 }
 
-.title-border {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 90px;
-    border-top: 1px solid;
-    border-bottom: none;
-    border-left: 1px solid;
-    border-right: 1px solid;
-}
-
-.title-border-left {
-    border-right: none;
-}
-
-.title-border-right {
-    left: auto;
-    right: 0;
-    border-left: none;
-}
-
-.title-border-middle {
-    border-top: none;
-}
 
 h1 {
     font-family: 'Libre Baskerville', Georgia, serif;
@@ -129,24 +94,3 @@ a:hover {
     color: inherit;
     text-decoration: underline;
 }
-
-.poem-row > div > *:first-child {
-    border-top: 1px solid #ffffff;
-    padding-top: 10px;
-}
-
-@media (max-width:767px) {
-    .author {
-        margin-top: 15px;
-    }
-
-    .poem-row > div > *:first-child {
-        border-top: 0 solid;
-        padding-top: 0;
-    }
-}
-
-.author {
-    margin-bottom: 25px;
-}
-
