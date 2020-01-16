@@ -39,7 +39,6 @@ body:before {
     z-index: -1;
 }
 
-
 @media (min-width:576px) {
   .container {
        max-width: 800px;
