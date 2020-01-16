@@ -26,6 +26,7 @@ body {
     /* padding-top: 10vh */
     min-height: 100%;
     background-attachment: fixed;
+    padding-top: 50px;
 }
 
 body:before {
@@ -53,6 +54,10 @@ body:before {
 
 .container{
   background-color: rgba(255, 243, 205, 0.9);
+}
+
+.menu-container{
+  background-color: rgb(255, 243, 205);  
 }
 
 .shadow{
