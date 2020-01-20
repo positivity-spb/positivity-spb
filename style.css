@@ -38,7 +38,7 @@ body:before {
     top: 0;
     bottom: 0;
     z-index: -1;
-    padding-top: 50px;    
+    padding-top: 50px;
 }
 
 @media (min-width:576px) {
@@ -81,6 +81,10 @@ body:before {
   background: inherit; #feaa62; inherit; #edc675;
   border-color: #f75902; red;#80b5df; #2b4e64;
   border-width: 2px;
+}
+
+.card{
+  background: inherit;
 }
 
 h2 {
