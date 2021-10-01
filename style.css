@@ -72,14 +72,14 @@ body:before {
 
 .alert-success{
   color: #2b4e64;
-  border-color: #80b5df; #2b4e64;
+  border-color: #80b5df; /*#2b4e64;*/
   border-width: 2px;
   background: inherit;
 }
 
 .alert-danger{
-  background: inherit; #feaa62; inherit; #edc675;
-  border-color: #f75902; red;#80b5df; #2b4e64;
+  background: inherit; /*#feaa62; inherit; #edc675;*/
+  border-color: #f75902; /*red;#80b5df; #2b4e64;*/
   border-width: 2px;
 }
 
@@ -98,6 +98,12 @@ h2 {
 
 h5 {
   font-size: 18px;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.2;
 }
 
 footer {
