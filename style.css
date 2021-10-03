@@ -69,15 +69,18 @@ html {
 body {
     background-color: var(--main-color);
     background-image: url('pic.jpg');
-    background-size: cover;
-    background-position: center center;
-    color: #000000;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #000000;
     font-family: Geometria, Montserrat, Helvetica, Arial, sans-serif;
 
     /* padding-top: 10vh */
     min-height: 100%;
-    background-attachment: fixed;
     padding-top: 50px;
 }
 
