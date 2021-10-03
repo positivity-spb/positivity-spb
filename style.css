@@ -1,21 +1,73 @@
+/* Content
+
+  color scheme
+  typography
+  layout
+  components (bootstrap overwritten)
+  - menu desktop
+  - menu desktop actions
+  - menu mobile
+  media
+
+*/
+
+/*---------------------- color scheme ----------------------*/
+:root {
+  --main-color: rgb(255, 243, 205);
+  --main-color-transparent: rgba(255, 243, 205, 0.9);
+  --highlight-color: white;
+/*- black for links color; */
+}
+
+/*---------------------- typography ----------------------*/
 @font-face {
     font-family: Geometria; /* Имя шрифта */
-    src: url(assets/fonts/Geometria.ttf); /* Путь к файлу со шрифтом */
+    src: url(./fonts/Geometria.ttf); /* Путь к файлу со шрифтом */
     font-weight: normal;
 }
 
 @font-face {
     font-family: Geometria-Bold; /* Имя шрифта */
-    src: url(assets/fonts/Geometria-Bold.ttf); /* Путь к файлу со шрифтом */
+    src: url(./fonts/Geometria-Bold.ttf); /* Путь к файлу со шрифтом */
     font-weight: bold;
 }
 
+a {
+  color: black
+}
+
+a:hover {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  letter-spacing: 6px;
+  font-size: 1.9rem;
+  font-weight: normal;
+  text-shadow: 0px 0px 14px rgba(0, 0, 0, 0.42);
+}
+
+h5 {
+font-size: 18px;
+line-height: 1.5;
+}
+
+p {
+font-size: 18px;
+line-height: 1.5;
+}
+
+/*---------------------- layout ----------------------*/
 html {
     min-height: 100%;
 }
 
 body {
-    background-color: #779184;
+    background-color: var(--main-color);
     background-image: url('pic.jpg');
     background-size: cover;
     background-position: center center;
@@ -41,6 +93,70 @@ body:before {
     padding-top: 50px;
 }
 
+.container{
+  background-color: var(--main-color-transparent);
+}
+
+.menu-container{
+  background-color: var(--main-color);
+}
+
+/*---------------------- components ----------------------*/
+/*---------------------- menu desktop ----------------------*/
+.bg-light {
+  background: var(--main-color) !important; /* scss: $light */
+}
+
+.navbar .nav-item a.nav-link {
+  color: black; /* scss: $navbar-dark-color */
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.navbar a.dropdown-item {
+  color: black; /* scss: $dropdown-dark-color */
+}
+.dropdown-menu-light {
+  background: var(--main-color); /* scss: $dropdown-dark-bg */
+}
+
+/*---------------------- menu desktop actions ----------------------*/
+.navbar .nav-item a.nav-link.active,
+.navbar .nav-item a.nav-link:hover,
+.navbar .nav-item a.nav-link:focus {
+  color: black; /* scss: $navbar-dark-hover-color */
+  text-decoration: none;
+}
+.navbar a.dropdown-item:hover,
+.navbar a.dropdown-item:focus {
+  color: black;
+  background: var(--highlight-color);  
+}
+.navbar .navbar-toggler:hover,
+.navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 4px var(--highlight-color);
+}
+
+/*---------------------- menu mobile ----------------------*/
+@media (max-width:767px) {
+  .navbar-nav {
+    padding-top: 10px;
+  }
+  .navbar .nav-item a.nav-link {
+    padding-left: 12px; 
+  }
+  .navbar .nav-item a.nav-link.active,
+  .navbar .nav-item a.nav-link:hover {
+    color: black;
+    background: var(--highlight-color);
+    border-style: none;
+  }
+  .navbar .nav-item a.nav-link:focus {
+    border-style: none;
+  }
+}
+
+/*---------------------- media ----------------------*/
 @media (min-width:576px) {
   .container {
        max-width: 800px;
@@ -51,81 +167,4 @@ body:before {
    .container {
         max-width: 350px;
     }
-}
-
-.container{
-  background-color: rgba(255, 243, 205, 0.9);
-}
-
-.menu-container{
-  background-color: rgb(255, 243, 205);
-}
-
-.shadow{
-  margin-bottom: 15px;
-}
-
-.text-danger{
-  color: inherit;
-  font-weight: bold;
-}
-
-.alert-success{
-  color: #2b4e64;
-  border-color: #80b5df; /*#2b4e64;*/
-  border-width: 2px;
-  background: inherit;
-}
-
-.alert-danger{
-  background: inherit; /*#feaa62; inherit; #edc675;*/
-  border-color: #f75902; /*red;#80b5df; #2b4e64;*/
-  border-width: 2px;
-}
-
-.card{
-  background: inherit;
-}
-
-h2 {
-    text-transform: uppercase;
-    font-family: 'Libre Baskerville', Georgia, serif;
-    letter-spacing: 6px;
-    font-size: 1.7rem;
-    font-weight: normal;
-    text-shadow: 0px 0px 14px rgba(0, 0, 0, 0.42);
-}
-
-h5 {
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.2;
-}
-
-footer {
-    text-align: center;
-    margin-top: 27px;
-}
-
-footer p {
-    border-top: 1px solid rgba(40, 66, 68, 0.48);
-    font-size: 13px;
-    padding-top: 10px;
-    opacity: 0.8;
-}
-
-a {
-    color: inherit;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-a:hover {
-    color: inherit;
-    font-weight: bold;
-    text-decoration: none;
 }

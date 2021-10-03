@@ -1,0 +1,151 @@
+/* Content
+
+  color scheme
+  layout
+  typography
+  utilities (bootstrap overwritten)
+  my utilities
+  components (bootstrap overwritten)
+  - tabs 
+  - menu desktop
+  - menu desktop actions
+  - menu mobile
+
+*/
+
+/*---------------------- color scheme ----------------------*/
+:root {
+  --divider-color: lightsteelblue;
+  --highlight-color: lightcyan; 
+  --menu-color: rgba(0, 87, 87, 0.9);
+/*- white, whitesmoke for background;
+  - black for links color; */
+}
+
+/*---------------------- layout ----------------------*/
+body {
+  overflow-y:scroll; /* always show vertical scroll */
+  padding-top: 3.5rem; /* space reserved for fixed top menu */
+  background: whitesmoke;
+}
+
+main {
+  background: white;
+}
+
+footer {
+  text-align: center; 
+  background: white;
+  border-top: 1px solid var(--divider-color);
+}
+
+.container {
+  max-width: 890px; 
+}
+
+/*---------------------- typography ----------------------*/
+h1, 
+h2 {
+  font-size: 1.2em;
+}
+a {
+  color: black;
+}
+a:hover {
+  color: black;
+  background: var(--highlight-color);
+}
+
+/*---------------------- utilities ----------------------*/
+.text-danger {
+  color: red !important; /* scss: $danger */
+}
+
+/*---------------------- my utilities ----------------------*/
+.my-divider {
+  border-top: 1px solid var(--divider-color);
+}
+.my-thick-divider {
+  border-top: 2px solid var(--divider-color);
+}
+
+.my-reference {
+  background: whitesmoke;
+}
+.my-reference:hover {
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .3);
+  background: var(--highlight-color);
+}
+
+/*---------------------- components ----------------------*/
+/*---------------------- tabs ----------------------*/
+.nav-tabs button,
+.nav-tabs button.nav-link.active,
+.nav-tabs button.nav-link:hover,
+.nav-tabs button.nav-link:focus {
+  color: black;
+}
+
+/*---------------------- menu desktop ----------------------*/
+.bg-dark {
+  background: var(--menu-color) !important; /* scss: $dark */
+}
+.navbar a.navbar-brand {
+  margin-left: 12px;   
+  color: white;
+  background: inherit;
+  border-bottom: 1px solid transparent;
+}
+.navbar .nav-item a.nav-link {
+  color: white; /* scss: $navbar-dark-color */
+  border-bottom: 1px solid transparent;
+}
+.navbar a.dropdown-item {
+  color: white; /* scss: $dropdown-dark-color */
+}
+.dropdown-menu-dark {
+  background: var(--menu-color); /* scss: $dropdown-dark-bg */
+}
+
+/*---------------------- menu desktop actions ----------------------*/
+.navbar a.navbar-brand:hover,
+.navbar a.navbar-brand:focus {
+  border-bottom: 1px solid white;
+  outline: none;
+}
+.navbar .nav-item a.nav-link.active,
+.navbar .nav-item a.nav-link:hover,
+.navbar .nav-item a.nav-link:focus {
+  color: white; /* scss: $navbar-dark-hover-color */
+  background: inherit;
+  border-bottom: 1px solid white;
+  outline: none;
+}
+.navbar a.dropdown-item:hover,
+.navbar a.dropdown-item:focus {
+  color: black;
+  background: var(--highlight-color);  
+}
+.navbar .navbar-toggler:hover,
+.navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 4px var(--highlight-color);
+}
+
+/*---------------------- menu mobile ----------------------*/
+@media (max-width:767px) {
+  .navbar-nav {
+    padding-top: 10px;
+  }
+  .navbar .nav-item a.nav-link {
+    padding-left: 12px; 
+  }
+  .navbar .nav-item a.nav-link.active,
+  .navbar .nav-item a.nav-link:hover {
+    color: black;
+    background: var(--highlight-color);
+    border-style: none;
+  }
+  .navbar .nav-item a.nav-link:focus {
+    border-style: none;
+  }
+}
