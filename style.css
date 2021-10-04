@@ -14,7 +14,7 @@
 /*---------------------- color scheme ----------------------*/
 :root {
   --main-color: rgb(255, 243, 205);
-  --main-color-transparent: rgba(255, 243, 205, 0.9);
+  --main-color-transparent: rgba(255, 243, 205, 0.8);
   --highlight-color: white;
 /*- black for links color; */
 }
